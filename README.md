@@ -1,14 +1,26 @@
 # 🚦 Climate Resilient Transportation System
 
-### Edge AI-Based Road Surface Friction Prediction, Risk Assessment & Safe Route Recommendation
+### Edge AI-Based Road Surface Friction Prediction, Risk Assessment & Risk-Aware Route Recommendation
 
-> An intelligent transportation system that uses Computer Vision, Deep Learning, Sensor Fusion, and Risk Analytics to predict road surface friction, identify hazardous road segments, and recommend safer routes for drivers.
+![Dashboard](screenshots/dashboard.png)
+
+## 🚀 Key Results
+
+* 🎯 Accuracy: **92.1%**
+* 🏆 F1 Score: **91.2%**
+* 📉 MAE: **0.048**
+* 📈 RMSE: **0.067**
+* ⚡ Edge Inference: **~85 ms**
+* 🛣 Risk-Aware Route Recommendation
+* 🌍 Geo-Spatial Hazard Mapping
+
+> An intelligent transportation system that uses Computer Vision, Deep Learning, Sensor Fusion, and Risk Analytics to predict road surface friction, identify hazardous road segments, and enable risk-aware route recommendation for drivers.
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue)
 ![Machine Learning](https://img.shields.io/badge/Machine-Learning-green)
 ![Computer Vision](https://img.shields.io/badge/Computer-Vision-orange)
 ![Smart Cities](https://img.shields.io/badge/Smart-Cities-red)
-![Research Project](https://img.shields.io/badge/Research-IEEE%20Inspired-purple)
+![Research Inspired](https://img.shields.io/badge/Research-IEEE%20Inspired-purple)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
 ---
@@ -17,7 +29,7 @@
 
 Road accidents caused by snow, ice, wet roads, and reduced friction remain a major challenge in intelligent transportation systems.
 
-This project proposes an **Edge AI-based Climate Resilient Transportation System** that predicts road surface friction using computer vision and multi-modal sensor data, evaluates driving risk, and recommends safer routes between locations.
+This project proposes an **Edge AI-based Climate Resilient Transportation System** that predicts road surface friction using computer vision and multi-modal sensor data, evaluates driving risk, and enables risk-aware route recommendation between locations.
 
 Unlike traditional approaches that rely heavily on expensive road sensors, this system combines:
 
@@ -27,7 +39,7 @@ Unlike traditional approaches that rely heavily on expensive road sensors, this 
 * 📡 Polarimetric Radar Features
 * 🤖 Deep Learning Models
 
-to provide real-time road safety intelligence.
+to provide intelligent road safety analytics.
 
 ---
 
@@ -64,7 +76,7 @@ Road Images + Weather Data + Radar Data
      Hazardous Segment Detection
                     │
                     ▼
-      Safe Route Recommendation
+ Risk-Aware Route Recommendation
 ```
 
 ---
@@ -93,9 +105,9 @@ Calculates:
 * Skid Probability
 * Road Safety Score
 
-### 🛣 Safe Route Recommendation
+### 🛣 Risk-Aware Route Recommendation
 
-Instead of simply finding the shortest path, the system identifies the safest path by considering:
+Instead of simply finding the shortest path, the framework enables route selection using:
 
 * Friction levels
 * Hazard severity
@@ -135,29 +147,6 @@ The implementation combines these approaches into a unified intelligent transpor
 
 ---
 
-# 📄 Research Paper
-
-This repository is accompanied by our research paper:
-
-### Edge AI-Based Road Surface Friction Prediction Using Deep Learning for Smart City Applications
-
-**Authors**
-
-* Hana Maria Philip
-* S Sri Poojitha
-* Apilagunta Leela Chandana
-
-The paper discusses:
-
-* CNN-based friction prediction
-* Physics-based risk modelling
-* Geo-spatial mapping
-* Federated learning integration
-* Edge deployment strategies
-* Smart city transportation applications
-
----
-
 # 🏗 System Architecture
 
 ```text
@@ -179,7 +168,7 @@ Friction Prediction
 Geo-Spatial Mapping
       │
       ▼
-Safe Route Recommendation
+Risk-Aware Route Recommendation
 ```
 
 ---
@@ -194,14 +183,13 @@ Safe Route Recommendation
 | RMSE                   | 0.067  |
 | Edge Inference Latency | ~85 ms |
 
-The proposed model consistently outperformed baseline approaches in terms of:
+The proposed model demonstrated strong performance in:
 
-* Accuracy
-* Precision
-* Recall
-* Stability
-* Edge Efficiency
-* Geo-Spatial Mapping Performance
+* Classification accuracy
+* Prediction reliability
+* Edge efficiency
+* Geo-spatial mapping
+* Intelligent risk analysis
 
 ---
 
@@ -219,7 +207,7 @@ The proposed model consistently outperformed baseline approaches in terms of:
 
 # 📈 Visual Analytics
 
-The system generates 12 analytical visualizations including:
+The system generates **12 analytical visualizations**, including:
 
 * AP Comparison Analysis
 * DRAP Performance Analysis
@@ -283,7 +271,7 @@ Real-time road safety monitoring.
 
 ### Navigation Systems
 
-Recommend safer routes during adverse weather.
+Support safer routing during adverse weather.
 
 ### Autonomous Vehicles
 
@@ -307,6 +295,9 @@ climate-resilient-transportation-system/
 ├── paper/
 │   └── Edge_AI_Road_Friction_Prediction.pdf
 │
+├── screenshots/
+│   └── dashboard.png
+│
 ├── src/
 │   ├── model.py
 │   └── generate_graphs.py
@@ -315,7 +306,9 @@ climate-resilient-transportation-system/
 │   └── road_condition_data.csv
 │
 ├── dashboard/
-│   └── snowy-road-dashboard.jsx
+│   ├── src/
+│   ├── public/
+│   └── package.json
 │
 ├── results/
 │   ├── graph1_ap_comparison.png
@@ -354,10 +347,12 @@ Generate all visualizations:
 python src/generate_graphs.py
 ```
 
-Outputs will be generated in:
+Run dashboard:
 
-```text
-results/
+```bash
+cd dashboard
+npm install
+npm run dev
 ```
 
 ---
@@ -367,6 +362,7 @@ results/
 ### Programming
 
 * Python
+* JavaScript
 
 ### Machine Learning
 
@@ -381,12 +377,12 @@ results/
 ### Visualization
 
 * Matplotlib
+* Recharts
 
 ### Frontend
 
 * React
 * Tailwind CSS
-* Recharts
 
 ### Research Areas
 
@@ -398,6 +394,44 @@ results/
 
 ---
 
+## 📊 Sample Results
+
+### Average Precision Comparison
+
+![AP Comparison](results/graph1_ap_comparison.png)
+
+### Friction Distribution
+
+![Friction Distribution](results/graph4_friction_distribution.png)
+
+### Confusion Matrix
+
+![Confusion Matrix](results/graph6_confusion_matrix.png)
+
+### Radar-Friction Correlation
+
+![Radar Correlation](results/graph11_radar_friction_correlation.png)
+
+---
+
+# 📄 Research Manuscript
+
+This repository is accompanied by a research manuscript titled:
+
+**"Edge AI-Based Road Surface Friction Prediction Using Deep Learning for Smart City Applications"**
+
+**Authors**
+
+* Hana Maria Philip
+* S Sri Poojitha
+* Apilagunta Leela Chandana
+
+The manuscript presents the methodology, mathematical formulation, experiments, and evaluation of the proposed intelligent transportation framework.
+
+📄 [Read the Research Manuscript](paper/Final_Paper.pdf)
+
+---
+
 # 🔮 Future Improvements
 
 * Live Weather API Integration
@@ -406,7 +440,7 @@ results/
 * Autonomous Vehicle Integration
 * Real-Time Route Re-Ranking
 * Mobile Application Deployment
-* Edge Device Deployment (Jetson / Raspberry Pi)
+* Edge Device Deployment (Jetson Nano / Raspberry Pi)
 
 ---
 
@@ -415,10 +449,9 @@ results/
 ### Hana Maria Philip
 
 🎓 B.Tech Computer Science Engineering — VIT Chennai
-
 📊 BS Data Science — IIT Madras
 
-Interests:
+**Interests**
 
 * Machine Learning
 * Computer Vision
